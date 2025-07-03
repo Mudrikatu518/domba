@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domba Garut Jaya - Penitipan & Pengelolaan Domba Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind: bg-slate-50 */
+            color: #334155; /* Tailwind: text-slate-700 */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 4px;
+            background-color: #22c55e; /* Tailwind: bg-emerald-500 */
+            border-radius: 9999px; /* rounded-full */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header/Navigation Bar -->
+    <header class="bg-white shadow-sm py-4">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-emerald-600">Domba Garut Jaya</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#tentang-kami" class="text-slate-600 hover:text-emerald-500 transition duration-300">Tentang Kami</a>
+                <a href="#cara-kerja" class="text-slate-600 hover:text-emerald-500 transition duration-300">Cara Kerja</a>
+                <a href="#kapasitas" class="text-slate-600 hover:text-emerald-500 transition duration-300">Kandang</a>
+                <a href="#kontak" class="text-slate-600 hover:text-emerald-500 transition duration-300">Kontak</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-600 hover:text-emerald-500 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-8 text-xl">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-slate-600 hover:text-emerald-500 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="#tentang-kami" class="text-slate-700 hover:text-emerald-600 transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Tentang Kami</a>
+            <a href="#cara-kerja" class="text-slate-700 hover:text-emerald-600 transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Cara Kerja</a>
+            <a href="#kapasitas" class="text-slate-700 hover:text-emerald-600 transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Kandang</a>
+            <a href="#kontak" class="text-slate-700 hover:text-emerald-600 transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Kontak</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-r from-emerald-500 to-green-600 text-white py-20 md:py-32 overflow-hidden rounded-b-3xl shadow-lg">
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
+                    Titipkan Domba Garut Anda, <br class="hidden md:inline"> Panen Keuntungan Bersama!
+                </h1>
+                <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">
+                    Kami mengelola domba Garut Anda dengan profesional, dari perawatan hingga penjualan, dengan sistem bagi hasil yang adil.
+                </p>
+                <a href="#cara-kerja" class="bg-white text-emerald-700 hover:bg-emerald-100 px-8 py-4 rounded-full text-lg font-semibold shadow-xl transition duration-300 transform hover:scale-105">
+                    Mulai Nitip Sekarang!
+                </a>
+            </div>
+            <!-- Background pattern/shapes for elegance -->
+            <div class="absolute inset-0 z-0 opacity-10">
+                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <pattern id="pattern-circles" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <circle cx="5" cy="5" r="1" fill="rgba(255,255,255,0.2)"></circle>
+                        </pattern>
+                    </defs>
+                    <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Tentang Kami Section -->
+        <section id="tentang-kami" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Foto+Domba+Garut+Profesional" alt="Domba Garut di Kandang" class="rounded-2xl shadow-xl w-full h-auto object-cover transform hover:scale-105 transition duration-500">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-800 section-title mx-auto md:mx-0">Tentang Kami</h2>
+                    <p class="text-lg leading-relaxed mb-4 text-slate-600">
+                        Kami adalah tim pengelola domba Garut profesional yang berdedikasi untuk memberikan perawatan terbaik bagi domba titipan Anda. Dengan pengalaman bertahun-tahun dalam peternakan domba Garut, kami memahami seluk-beluk pemeliharaan, kesehatan, hingga strategi penjualan yang optimal.
+                    </p>
+                    <p class="text-lg leading-relaxed text-slate-600">
+                        Fokus kami adalah memaksimalkan potensi pertumbuhan dan nilai jual domba Anda, sehingga Anda bisa mendapatkan keuntungan tanpa perlu terlibat langsung dalam operasional harian. Kami percaya pada transparansi dan kepercayaan dalam setiap langkah.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cara Kerja Section -->
+        <section id="cara-kerja" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-slate-800 section-title mx-auto">Bagaimana Sistem Bagi Hasil Kami Bekerja?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold">1</div>
+                        <h3 class="text-xl font-semibold mb-4 text-slate-700">Titipkan Domba Garut Anda</h3>
+                        <p class="text-slate-600">Daftarkan domba Anda melalui website kami. Kami akan memverifikasi dan menyiapkan kandang terbaik untuk domba Anda.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold">2</div>
+                        <h3 class="text-xl font-semibold mb-4 text-slate-700">Kami Kelola Sepenuhnya</h3>
+                        <p class="text-slate-600">Tim ahli kami akan merawat domba Anda dengan pakan berkualitas, perawatan kesehatan rutin, dan lingkungan yang optimal.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold">3</div>
+                        <h3 class="text-xl font-semibold mb-4 text-slate-700">Panen Keuntungan Bersama</h3>
+                        <p class="text-slate-600">Setelah domba siap jual, kami akan memasarkannya. Laba penjualan akan dibagi: <span class="font-bold text-emerald-600">30% untuk Anda</span> sebagai pemilik, dan <span class="font-bold text-emerald-600">70% untuk kami</span> sebagai pengelola.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kapasitas Kandang Section -->
+        <section id="kapasitas" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-slate-800 section-title mx-auto">Kapasitas Kandang Kami</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Kandang+Domba+Modern" alt="Kandang Domba Modern" class="rounded-2xl shadow-xl w-full h-auto object-cover transform hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <p class="text-lg leading-relaxed mb-4 text-slate-600">
+                            Kami memiliki fasilitas kandang modern dan terawat dengan total kapasitas <span class="text-emerald-600 font-bold text-2xl">50 kandang</span>. Setiap kandang dirancang untuk kenyamanan dan kesehatan domba, memastikan lingkungan yang optimal untuk pertumbuhan.
+                        </p>
+                        <p class="text-lg leading-relaxed text-slate-600">
+                            Dengan kapasitas ini, kami siap menerima penitipan domba Garut dari individu yang ingin mengoptimalkan aset mereka tanpa repot.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-r from-emerald-600 to-green-700 text-white rounded-t-3xl shadow-lg">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 drop-shadow-md">Siap Titipkan Domba Anda?</h2>
+                <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">
+                    Bergabunglah dengan para pemilik domba yang telah merasakan kemudahan dan keuntungan bersama kami.
+                </p>
+                <a href="#kontak" class="bg-white text-emerald-700 hover:bg-emerald-100 px-10 py-5 rounded-full text-xl font-semibold shadow-xl transition duration-300 transform hover:scale-105">
+                    Hubungi Kami Sekarang!
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-slate-800 text-slate-300 py-12">
+        <div class="container mx-auto px-4 text-center md:text-left grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4 text-white">Domba Garut Jaya</h3>
+                <p class="text-sm">Solusi terbaik untuk penitipan dan pengelolaan domba Garut Anda.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4 text-white">Informasi</h3>
+                <ul>
+                    <li class="mb-2"><a href="#tentang-kami" class="hover:text-emerald-400 transition duration-300">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="#cara-kerja" class="hover:text-emerald-400 transition duration-300">Cara Kerja</a></li>
+                    <li class="mb-2"><a href="#kapasitas" class="hover:text-emerald-400 transition duration-300">Kapasitas Kandang</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4 text-white">Kontak Kami</h3>
+                <p class="mb-2">Email: info@dombagarutjaya.com</p>
+                <p class="mb-2">Telepon: +62 812-3456-7890</p>
+                <p>Alamat: [Alamat Lengkap Peternakan Anda], Garut, Indonesia</p>
+            </div>
+        </div>
+        <div class="border-t border-slate-700 mt-8 pt-8 text-center text-sm">
+            &copy; 2025 Domba Garut Jaya. Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
